@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEO - Python Dev & Cyber Explorer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Transition Overlay -->
+    <div class="theme-transition-overlay" id="themeOverlay"></div>
+
+    <!-- Mouse Flashlight Tracker -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Background Elements -->
+    <div class="bg-abstract-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="bg-grid-mesh"></div>
+
+    <!-- Header Navigation -->
+    <header class="header blur-glass" id="header">
+        <div class="container header-inner">
+            <a href="#" class="brand-logo">HEO<span class="dot">.</span></a>
+            
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+                <a href="#github-live" class="nav-link" data-i18n="nav_github">GitHub Live</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Selector -->
+                <div class="lang-selector-wrapper">
+                    <button class="lang-toggle text-hover-glow" id="langToggleBtn">TR</button>
+                </div>
+
+                <!-- Theme Selector -->
+                <div class="theme-selector-wrapper">
+                    <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme Selector">
+                        <i class="fa-solid fa-palette"></i>
+                    </button>
+                    <div class="theme-dropdown glass-panel" id="themeDropdown">
+                        <button class="theme-btn" data-set-theme="blue"><span class="color-dot blue"></span> <span data-i18n="theme_blue">Core Blue</span></button>
+                        <button class="theme-btn" data-set-theme="red"><span class="color-dot red"></span> <span data-i18n="theme_red">Neon Red</span></button>
+                        <button class="theme-btn" data-set-theme="white"><span class="color-dot white"></span> <span data-i18n="theme_white">Light Glass</span></button>
+                        <button class="theme-btn" data-set-theme="cream"><span class="color-dot cream"></span> <span data-i18n="theme_cream">Vintage Cream</span></button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill premium-badge">
+                        <span class="ping"></span>
+                        <span data-i18n="hero_badge">Available for projects</span>
+                    </div>
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        Kodun Mimarisiyle Tanışın.
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        17 yaşında bir Python geliştiricisi ve Linux tutkunuyum. Karmaşık sistemleri basit ve etkili çözümlere dönüştürmeyi seviyorum.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary btn-glow"><span data-i18n="hero_cta_projects">View Work</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/heom27" target="_blank" class="btn btn-secondary glass-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                    <div class="tech-stack-row">
+                        <span data-i18n="hero_powered_by">Tech Stack: </span>
+                        <div class="tech-icons">
+                            <i class="fa-brands fa-python" title="Python"></i>
+                            <i class="fa-brands fa-linux" title="Linux"></i>
+                            <i class="fa-solid fa-shield-halved" title="Cybersecurity"></i>
+                            <i class="fa-solid fa-palette" title="Design"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tilt-card-wrapper" data-tilt>
+                        <div class="glass-card hero-profile-card shadow-glow">
+                            <div class="glare-container"><div class="glare"></div></div>
+                            <div class="card-bg-glow"></div>
+                            <div class="profile-header">
+                                <div class="avatar-ring">
+                                    <div class="avatar-img">HEO</div>
+                                </div>
+                                <div class="profile-info">
+                                    <h3>HEO</h3>
+                                    <p data-i18n="profile_role">Python Dev & Cyber Explorer</p>
+                                </div>
+                            </div>
+                            <div class="profile-stats">
+                                <div class="stat-box">
+                                    <span class="stat-value">3+</span>
+                                    <span class="stat-label" data-i18n="stat_experience">Deneyim</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-value">15+</span>
+                                    <span class="stat-label" data-i18n="stat_projects">Projects</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-value">100%</span>
+                                    <span class="stat-label" data-i18n="stat_motivation">Motivasyon</span>
+                                </div>
+                            </div>
+                            <div class="profile-footer">
+                                <span class="status-indicator online"></span> <span data-i18n="profile_status">System Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="title text-glow" data-i18n="skills_title">My Expertise</h2>
+                    <p class="subtitle" data-i18n="skills_subtitle">Core competencies and technical skills.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass-panel" data-tilt>
+                        <div class="glare-container"><div class="glare"></div></div>
+                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3 data-i18n="skill_1_title">Python</h3>
+                        <p data-i18n="skill_1_desc">FastAPI, Otomasyon ve Veri Kazıma.</p>
+                    </div>
+                    <div class="skill-card glass-panel" data-tilt>
+                        <div class="glare-container"><div class="glare"></div></div>
+                        <div class="skill-icon"><i class="fa-brands fa-linux"></i></div>
+                        <h3 data-i18n="skill_2_title">Linux</h3>
+                        <p data-i18n="skill_2_desc">Sistem yönetimi ve sunucu yapılandırması.</p>
+                    </div>
+                    <div class="skill-card glass-panel" data-tilt>
+                        <div class="glare-container"><div class="glare"></div></div>
+                        <div class="skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                        <h3 data-i18n="skill_3_title">Grafik Tasarım</h3>
+                        <p data-i18n="skill_3_desc">Photoshop ve Illustrator ile modern tasarımlar.</p>
+                    </div>
+                    <div class="skill-card glass-panel" data-tilt>
+                        <div class="glare-container"><div class="glare"></div></div>
+                        <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 data-i18n="skill_4_title">Siber Güvenlik</h3>
+                        <p data-i18n="skill_4_desc">Ağ tarama ve güvenlik analizi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="title text-glow" data-i18n="proj_title">Recent Projects</h2>
+                    <p class="subtitle" data-i18n="proj_subtitle">A showcase of some of my finest work.</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-embed-wrapper glass-panel shadow-heavy">
+                        <div class="embed-header">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-title">yerliapi.com</div>
+                        </div>
+                        <div class="embed-body" style="background: linear-gradient(135deg, #2c3e50 0%, #000 100%);">
+                            <div class="embed-content text-center">
+                                <div class="project-logo"><i class="fa-solid fa-network-wired"></i></div>
+                                <h3 data-i18n="proj_1_title">YerliAPI Nexus Core</h3>
+                                <p data-i18n="proj_1_desc">Türkiye'nin altyapı servislerini izleyen monitoring motoru.</p>
+                                <div class="tag-row justify-center mt-2">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">FastAPI</span>
+                                    <span class="tag">Monitoring</span>
+                                </div>
+                                <a href="#" target="_blank" class="btn btn-outline mt-4"><i class="fa-solid fa-eye"></i> <span data-i18n="proj_btn_visit">Visit Site</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-embed-wrapper glass-panel shadow-heavy">
+                        <div class="embed-header">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-title">subtrack-api.me</div>
+                        </div>
+                        <div class="embed-body" style="background: linear-gradient(135deg, #16a085 0%, #000 100%);">
+                            <div class="embed-content text-center">
+                                <div class="project-logo"><i class="fa-solid fa-coins"></i></div>
+                                <h3 data-i18n="proj_2_title">SubTrack API</h3>
+                                <p data-i18n="proj_2_desc">Abonelik takibi ve döviz kuru risk analizi asistanı.</p>
+                                <div class="tag-row justify-center mt-2">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Finance</span>
+                                    <span class="tag">API</span>
+                                </div>
+                                <a href="#" target="_blank" class="btn btn-outline mt-4"><i class="fa-solid fa-eye"></i> <span data-i18n="proj_btn_visit">Visit Site</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Live Section -->
+        <section class="section" id="github-live">
+            <div class="container">
+                <div class="github-super-container glass-panel shadow-glow">
+                    <div class="gh-header">
+                        <div class="gh-title-area">
+                            <i class="fa-brands fa-github gh-logo-xl"></i>
+                            <div>
+                                <h2 class="title" data-i18n="gh_title">GitHub Activity</h2>
+                                <p class="subtitle mb-0" data-i18n="gh_subtitle">Real-time stats from my GitHub profile</p>
+                            </div>
+                        </div>
+                        <div class="live-pulse">
+                            <span class="pulse-dot"></span> <span data-i18n="gh_sync">Live Sync</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gh-body" id="ghDataContainer">
+                        <div class="skeleton-loader gh-profile-skeleton">
+                            <div class="sk-avatar"></div>
+                            <div class="sk-lines">
+                                <div class="sk-line w-50"></div>
+                                <div class="sk-line w-75"></div>
+                            </div>
+                        </div>
+                        <div class="skeleton-loader gh-repos-skeleton">
+                            <div class="sk-repo-card"></div>
+                            <div class="sk-repo-card"></div>
+                            <div class="sk-repo-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / Contact -->
+        <section class="section section-cta">
+            <div class="container text-center">
+                <h2 class="title" data-i18n="cta_title">Let's Work Together</h2>
+                <p class="subtitle centered-sub" data-i18n="cta_subtitle">Have a project in mind? Contact me today and let's get started.</p>
+                <div class="mt-4">
+                    <a href="mailto:contact@heo.me" class="btn btn-primary btn-glow btn-lg"><span data-i18n="cta_btn">Send an Email</span> <i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a class="brand-logo" style="font-size: 1.25rem;">HEO<span>.</span></a>
+                <p data-i18n="footer_slogan">Premium digital architecture.</p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; <span id="currentYear"></span> HEO.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/heom27" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
